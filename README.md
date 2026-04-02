@@ -164,3 +164,25 @@ This project leverages historical visa disclosure data to:
 ---
 
 # 📂 Project Structure
+
+├── app/
+│ ├── main.py
+│ ├── predict.py
+│ ├── preprocess.py
+│ ├── utils.py
+│ ├── config.py
+│ └── api.py
+│
+├── src/
+│ ├── data_pipeline.py
+│ ├── eda.py
+│ ├── train.py
+│
+├── data/
+│ ├── raw/
+│ ├── processed/
+│
+├── models/
+├── reports/
+├── requirements.txt
+└── README.md
