@@ -1,0 +1,91 @@
+{
+  "regression": {
+    "best_model": "linear_regression",
+    "metrics": {
+      "linear_regression": {
+        "mae": 5.661475171789038,
+        "rmse": 7.155707055553271,
+        "r2": 0.18587085943862447
+      },
+      "random_forest": {
+        "mae": 6.572006315443815,
+        "rmse": 8.297324174618566,
+        "r2": -0.09462234832144634
+      },
+      "gradient_boosting": {
+        "mae": 5.811139751412071,
+        "rmse": 7.3738104709760774,
+        "r2": 0.1354857908695899
+      }
+    },
+    "residual_std": 7.141957041593731
+  },
+  "classification": {
+    "internship_note": "LCA-style data is often highly imbalanced (many Certified, few Denied). We use class_weight='balanced' and report macro-F1, balanced accuracy, average precision (PR-AUC), and per-class recall \u2014 not accuracy alone.",
+    "best_model": "logistic_balanced",
+    "model_selection_metric": "f1_macro (higher is better across both classes)",
+    "metrics": {
+      "logistic_balanced": {
+        "f1_macro": 0.6885588638165958,
+        "f1_weighted": 0.7029846442217575,
+        "balanced_accuracy": 0.6942252378493989,
+        "roc_auc": 0.6978390736779997,
+        "average_precision": 0.7495259108297359,
+        "precision_denied_class0": 0.5922330097087378,
+        "recall_denied_class0": 0.6703296703296703,
+        "f1_denied_class0": 0.6288659793814433,
+        "precision_certified_class1": 0.781021897810219,
+        "recall_certified_class1": 0.7181208053691275,
+        "f1_certified_class1": 0.7482517482517482,
+        "confusion_matrix": [
+          [
+            61,
+            30
+          ],
+          [
+            42,
+            107
+          ]
+        ],
+        "classification_report": "              precision    recall  f1-score   support\n\n      Denied       0.59      0.67      0.63        91\n   Certified       0.78      0.72      0.75       149\n\n    accuracy                           0.70       240\n   macro avg       0.69      0.69      0.69       240\nweighted avg       0.71      0.70      0.70       240\n"
+      },
+      "random_forest_balanced": {
+        "f1_macro": 0.6123506874013973,
+        "f1_weighted": 0.6381132146345129,
+        "balanced_accuracy": 0.6108857585367653,
+        "roc_auc": 0.622464783538609,
+        "average_precision": 0.6983183497799417,
+        "precision_denied_class0": 0.5301204819277109,
+        "recall_denied_class0": 0.4835164835164835,
+        "f1_denied_class0": 0.5057471264367817,
+        "precision_certified_class1": 0.7006369426751592,
+        "recall_certified_class1": 0.738255033557047,
+        "f1_certified_class1": 0.7189542483660131,
+        "confusion_matrix": [
+          [
+            44,
+            47
+          ],
+          [
+            39,
+            110
+          ]
+        ],
+        "classification_report": "              precision    recall  f1-score   support\n\n      Denied       0.53      0.48      0.51        91\n   Certified       0.70      0.74      0.72       149\n\n    accuracy                           0.64       240\n   macro avg       0.62      0.61      0.61       240\nweighted avg       0.64      0.64      0.64       240\n"
+      }
+    },
+    "class_distribution_full_dataset": {
+      "denied": 457,
+      "certified": 743,
+      "approx_ratio_certified_to_denied": 1.63
+    },
+    "balancing_strategy": {
+      "sklearn_class_weight": "balanced",
+      "training_undersample_majority": "disabled (set VISA_CLF_UNDERSAMPLE=1 to enable training-only majority cap)"
+    },
+    "label_map": {
+      "0": "Denied",
+      "1": "Certified"
+    }
+  }
+}
