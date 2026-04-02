@@ -186,3 +186,5 @@ This project leverages historical visa disclosure data to:
 ├── reports/
 ├── requirements.txt
 └── README.md
+
+Deployed link :- https://ai-enabled-visa-status-prediction-bwspmuujew9cw4rtk3rccy.streamlit.app/
